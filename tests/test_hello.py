@@ -1,5 +1,5 @@
 import unittest
-import commands.hello as hello
+import thorin.commands.hello as hello
 
 class TestHello(unittest.TestCase):
     def test_hello(self):

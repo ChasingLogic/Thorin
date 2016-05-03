@@ -1,5 +1,5 @@
 # import unittest
-# import commands.build as build
+# import thorin.commands.build as build
 
 # class TestBuild(unittest.TestCase):
 #     def test_run_build(self):
