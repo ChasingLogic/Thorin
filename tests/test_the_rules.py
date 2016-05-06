@@ -1,5 +1,5 @@
 import unittest
-import commands.the_rules as rules
+import thorin.commands.the_rules as rules
 
 class TestTheRules(unittest.TestCase):
     def test_the_rules(self):
