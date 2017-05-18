@@ -72,7 +72,7 @@ def build(bot, inc_msg):
                       ' '.join(inc_msg[inc_msg.index("build") + 1:]) +
                       "/build?token=" + JENKINS_API_KEY)
     if r.status_code > 300:
-        print(("Error with the request:", r.text))
+        print("Error with the request:", r.text)
         return "I couldn't start the build."
     else:
         return "Build successfully started."
