@@ -51,7 +51,7 @@ class Bot:
 
         # Check if tricks exists and add it if so.
         if exists('./tricks'):
-            import tricks
+            from . import tricks
             self.commands.update(tricks.commands)
 
         # Look for local handlers

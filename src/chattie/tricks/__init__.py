@@ -14,7 +14,7 @@ def helpcmd(bot, inc_msg):
 I know the following commands:
 
 """
-        for name, fun in bot.commands.items():
+        for name, fun in list(bot.commands.items()):
             msg += """%s
 --------
 %s

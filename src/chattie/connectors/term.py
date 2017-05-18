@@ -17,7 +17,7 @@ class Connector:
               ' Type quit to exit.')
 
         while True:
-            msg = input('>> ')
+            msg = eval(input('>> '))
             if msg == 'quit':
                 break
             self.parser(0, msg)
