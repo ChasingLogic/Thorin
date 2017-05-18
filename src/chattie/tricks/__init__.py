@@ -53,7 +53,7 @@ def yoda(bot, inc_msg):
     try:
         return r.json()['contents']['translated'].replace("  ", " ")
     except:
-        print((r.text))
+        print(r.text)
         return "An unexpected error occured"
 
 

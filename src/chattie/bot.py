@@ -35,7 +35,7 @@ class Bot:
         """
         print("Booting systems...")
         self.name = name
-        print(("Hello my name is " + name + "..."))
+        print("Hello my name is " + name + "...")
         self.connector = connector.Connector(self.parse_message)
         if isfile("./inventory.json"):
             print("Loading my inventory from last time...")
@@ -95,7 +95,7 @@ class Bot:
         if self.name.lower() in msg.lower():
             print("Someone is talking to me...")
             split = msg.split(" ")
-            print(("Parsed: ", split))
+            print("Parsed: ", split)
             # get the first word after our name as that will be the
             # command always.
             cmd_idx = 1
