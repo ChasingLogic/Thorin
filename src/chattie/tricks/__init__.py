@@ -14,7 +14,7 @@ def helpcmd(bot, inc_msg):
 I know the following commands:
 
 """
-        for name, fun in bot.commands.items():
+        for name, fun in list(bot.commands.items()):
             msg += """%s
 --------
 %s
@@ -53,7 +53,7 @@ def yoda(bot, inc_msg):
     try:
         return r.json()['contents']['translated'].replace("  ", " ")
     except:
-        print(r.text)
+        print((r.text))
         return "An unexpected error occured"
 
 
@@ -72,7 +72,7 @@ def build(bot, inc_msg):
                       ' '.join(inc_msg[inc_msg.index("build") + 1:]) +
                       "/build?token=" + JENKINS_API_KEY)
     if r.status_code > 300:
-        print("Error with the request:", r.text)
+        print(("Error with the request:", r.text))
         return "I couldn't start the build."
     else:
         return "Build successfully started."
