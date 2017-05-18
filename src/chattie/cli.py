@@ -21,7 +21,7 @@ def connectors():
     """Show all installed connectors."""
     connectors = get_connectors()
     for c in connectors:
-        print((c.name))
+        print(c.name)
 
 
 @chattie.command()
@@ -31,7 +31,7 @@ def doc(connector_name):
     connectors = get_connectors()
     for c in connectors:
         if c.name == connector_name:
-            print((getdoc(c.load())))
+            print(getdoc(c.load()))
 
 
 @chattie.command()
@@ -39,7 +39,7 @@ def commands():
     """Show all installed commands."""
     import chattie.connectors.term as term
     bot = Bot('Chattie', term, get_commands())
-    print((helpcmd(bot, '')))
+    print(helpcmd(bot, ''))
 
 
 @chattie.command()
@@ -123,7 +123,7 @@ def run(name, connector):
             conn = c.load()
 
     commands = get_commands()
-    print(('comm', commands))
+    print('comm', commands)
     bot = Bot(name, conn, commands)
     bot.run()
 
